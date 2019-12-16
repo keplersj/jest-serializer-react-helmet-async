@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "jest",
-    "prerelease": "tsc"
+    "prepack": "tsc",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
