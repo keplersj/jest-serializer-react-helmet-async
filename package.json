@@ -1,0 +1,71 @@
+{
+  "name": "jest-serializer-react-helmet-async",
+  "version": "0.0.0-development",
+  "description": "Serializer to display react-helmet-async data in Jest Snapshots",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prerelease": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keplersj/jest-serializer-react-helmet-async.git"
+  },
+  "keywords": [
+    "jest",
+    "react",
+    "react-helmet-async",
+    "unit-testing",
+    "snapshot-testing"
+  ],
+  "author": "Kepler Sticka-Jones <kepler@stickajones.org>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keplersj/jest-serializer-react-helmet-async/issues"
+  },
+  "homepage": "https://github.com/keplersj/jest-serializer-react-helmet-async#readme",
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@stryker-mutator/core": "^2.0.2",
+    "@stryker-mutator/html-reporter": "^2.0.2",
+    "@stryker-mutator/jest-runner": "^2.0.2",
+    "@stryker-mutator/typescript": "^2.0.2",
+    "@types/jest": "^24.0.17",
+    "@types/node": "^12.6.9",
+    "@types/react": "^16.9.1",
+    "@types/react-test-renderer": "^16.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "husky": "^3.0.3",
+    "jest": "^24.8.0",
+    "jest-runner-eslint": "^0.7.4",
+    "jest-runner-prettier": "^0.3.1",
+    "prettier": "^1.18.2",
+    "react": "^16.9.0",
+    "react-helmet-async": "^1.0.4",
+    "react-test-renderer": "^16.9.0",
+    "semantic-release": "^15.13.31",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-helmet-async": "*"
+  }
+}

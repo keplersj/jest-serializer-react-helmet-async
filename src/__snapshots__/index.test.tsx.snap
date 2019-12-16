@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Serialization function serializes React Helmet Async context correctly 1`] = `
+<div>
+  <span>
+    Hello, Jest!
+  </span>
+</div>
+`;
+
+exports[`Serialization function serializes React Helmet Async context correctly 2`] = `
+<html
+  lang="en"
+>
+  <head>
+    <meta
+      content="This is a unit test!"
+      data-rh={true}
+      name="description"
+    />
+    <title
+      data-rh={true}
+    >
+      Hello, Helmet!
+    </title>
+  </head>
+  <body />
+</html>
+`;
+
+exports[`Serialization module matches expectations 1`] = `
+Object {
+  "print": [Function],
+  "test": [Function],
+}
+`;
