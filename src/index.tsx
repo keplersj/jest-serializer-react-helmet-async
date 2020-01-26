@@ -1,48 +1,54 @@
 import * as React from "react";
 import { HelmetProvider } from "react-helmet-async";
 
-(HelmetProvider as any).canUseDOM = false;
+interface HelmetTestProvider {
+  canUseDOM: boolean;
+}
+
+// The typedef for react-helmet-async doesn't include canUseDOM, even though it's in the docs.
+//  Make TypeScript know it's there.
+((HelmetProvider as unknown) as HelmetTestProvider).canUseDOM = false;
 
 const ReactHelmetAsyncContextSerializer: jest.SnapshotSerializerPlugin = {
-  test(val) {
+  test(value) {
     return Boolean(
       // Does the value exist?
-      val &&
-        val.base &&
-        val.base.toComponent &&
-        val.bodyAttributes &&
-        val.bodyAttributes.toComponent &&
-        val.htmlAttributes &&
-        val.htmlAttributes.toComponent &&
-        val.link &&
-        val.link.toComponent &&
-        val.meta &&
-        val.meta.toComponent &&
-        val.noscript &&
-        val.noscript.toComponent &&
-        val.script &&
-        val.script.toComponent &&
-        val.style &&
-        val.style.toComponent &&
-        val.title &&
-        val.title.toComponent
+      value &&
+        value.base &&
+        value.base.toComponent &&
+        value.bodyAttributes &&
+        value.bodyAttributes.toComponent &&
+        value.htmlAttributes &&
+        value.htmlAttributes.toComponent &&
+        value.link &&
+        value.link.toComponent &&
+        value.meta &&
+        value.meta.toComponent &&
+        value.noscript &&
+        value.noscript.toComponent &&
+        value.script &&
+        value.script.toComponent &&
+        value.style &&
+        value.style.toComponent &&
+        value.title &&
+        value.title.toComponent
     );
   },
 
-  print(val, serialize) {
+  print(value, serialize) {
     // Recreate head from Helmet data
     const head = serialize(
-      <html {...val.htmlAttributes.toComponent()}>
+      <html {...value.htmlAttributes.toComponent()}>
         <head>
-          {val.base.toComponent()}
-          {val.link.toComponent()}
-          {val.meta.toComponent()}
-          {val.noscript.toComponent()}
-          {val.script.toComponent()}
-          {val.style.toComponent()}
-          {val.title.toComponent()}
+          {value.base.toComponent()}
+          {value.link.toComponent()}
+          {value.meta.toComponent()}
+          {value.noscript.toComponent()}
+          {value.script.toComponent()}
+          {value.style.toComponent()}
+          {value.title.toComponent()}
         </head>
-        <body {...val.bodyAttributes.toComponent()} />
+        <body {...value.bodyAttributes.toComponent()} />
       </html>
     );
 
