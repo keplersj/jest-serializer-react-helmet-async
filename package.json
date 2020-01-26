@@ -65,5 +65,11 @@
   "peerDependencies": {
     "react": "*",
     "react-helmet-async": "*"
+  },
+  "eslintConfig": {
+    "extends": "starstuff/auto",
+    "env": {
+      "node": true
+    }
   }
 }
