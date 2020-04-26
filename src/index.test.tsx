@@ -4,7 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import serializer from ".";
 
 const TestHead = ({
-  children
+  children,
 }: React.PropsWithChildren<{}>): React.ReactElement => (
   <>
     <Helmet>

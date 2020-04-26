@@ -54,7 +54,7 @@ const ReactHelmetAsyncContextSerializer: jest.SnapshotSerializerPlugin = {
 
     // Return recreated head
     return head;
-  }
+  },
 };
 
 export = ReactHelmetAsyncContextSerializer;

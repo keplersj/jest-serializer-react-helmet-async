@@ -22,7 +22,7 @@ Configure Jest to use the serializer in `jest.config.js`:
 
 ```js
 module.exports = {
-  snapshotSerializers: ["jest-serializer-react-helmet-async"]
+  snapshotSerializers: ["jest-serializer-react-helmet-async"],
 };
 ```
 

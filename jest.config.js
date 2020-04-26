@@ -11,8 +11,8 @@ module.exports = {
         "/node_modules/",
         "/dist/",
         "/coverage/",
-        "/reports/"
-      ]
+        "/reports/",
+      ],
     },
     {
       preset: "jest-runner-prettier",
@@ -21,8 +21,8 @@ module.exports = {
         "/node_modules/",
         "/dist/",
         "/coverage/",
-        "/reports/"
-      ]
+        "/reports/",
+      ],
     },
     {
       runner: "eslint",
@@ -33,8 +33,8 @@ module.exports = {
         "/node_modules/",
         "/dist/",
         "/coverage/",
-        "/reports/"
-      ]
-    }
-  ]
+        "/reports/",
+      ],
+    },
+  ],
 };
