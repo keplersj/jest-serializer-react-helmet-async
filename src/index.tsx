@@ -1,5 +1,5 @@
 import * as React from "react";
-import { HelmetProvider } from "react-helmet-async";
+import { HelmetData, HelmetProvider } from "react-helmet-async";
 
 interface HelmetTestProvider {
   canUseDOM: boolean;
@@ -10,7 +10,7 @@ interface HelmetTestProvider {
 ((HelmetProvider as unknown) as HelmetTestProvider).canUseDOM = false;
 
 const ReactHelmetAsyncContextSerializer: jest.SnapshotSerializerPlugin = {
-  test(value) {
+  test(value: any) {
     return Boolean(
       // Does the value exist?
       value &&
@@ -35,7 +35,7 @@ const ReactHelmetAsyncContextSerializer: jest.SnapshotSerializerPlugin = {
     );
   },
 
-  print(value, serialize) {
+  print(value: any, serialize) {
     // Recreate head from Helmet data
     const head = serialize(
       <html {...value.htmlAttributes.toComponent()}>
