@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/prevent-abbreviations */
 /* eslint-disable-next-line @typescript-eslint/no-var-requires */
 const path = require("path");
 
@@ -17,4 +16,3 @@ module.exports = {
     enableFindRelatedTests: true,
   },
 };
-/* eslint-enable unicorn/prevent-abbreviations */
