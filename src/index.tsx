@@ -1,5 +1,5 @@
 import * as React from "react";
-import { HelmetData, HelmetProvider } from "react-helmet-async";
+import { HelmetProvider } from "react-helmet-async";
 
 interface HelmetTestProvider {
   canUseDOM: boolean;
